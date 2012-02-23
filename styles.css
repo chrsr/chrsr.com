@@ -1,0 +1,108 @@
+body {
+    font-family: sans-serif;
+    font-size: 76%;
+    width: 100%;
+    background: #fff;
+}
+
+/* tools */
+
+/* clearfix */
+
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* content width */
+
+div {
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/* links */
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+header,
+section {
+    width: 100%;
+}
+
+header {
+
+    background: #444;
+    -webkit-box-shadow: 0px 0px 4px 0px #333;
+    -moz-box-shadow: 0px 0px 4px 0px #333;
+    box-shadow: 0px 0px 4px 0px #333;
+}
+
+header h1 {
+    float: left;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 1px 0 rgba(100, 100, 100, 0.7);
+}
+
+header nav {
+    float: right;
+}
+
+nav a {
+    float: left;
+    padding: 0.5rem 0.5rem 0 0;
+    list-style-type: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* content */
+
+section {
+    padding: 20px 0 0;
+}
+
+article {
+    float: left;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    background: #efefef;
+    border: solid 1px #fff;
+
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+    -webkit-box-shadow: 0 0 4px 0 #333;
+    -moz-box-shadow: 0 0 4px 0 #333;
+    box-shadow: 0 0 4px 0 #333;    
+}
+
+/* *** dumps *** */
+
+/* bike font */
+
+@font-face {
+    font-family: 'bikes';
+    src: url('dump/bikes.eot?#') format('eot'),
+       url('dump/bikes.woff') format('woff'),
+       url('dump/bikes.ttf') format('truetype');
+}
+
+b {
+    font-family: bikes, serif;
+    font-size: 4rem;
+    color: #222;
+}
