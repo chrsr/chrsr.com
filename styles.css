@@ -1,25 +1,5 @@
-body {
-    font-family: sans-serif;
-    font-size: 76%;
-    width: 100%;
-    background: #fff;
-}
 
-/* tools */
-
-/* clearfix */
-
-.cf:before,
-.cf:after {
-    content:"";
-    display:table;
-}
-
-.cf:after {
-    clear:both;
-}
-
-/* content width */
+/* structure */
 
 div {
     position: relative;
@@ -27,13 +7,7 @@ div {
     max-width: 960px;
 }
 
-/* links */
-
-a {
-    text-decoration: none;
-}
-
-/* header */
+/* layout */
 
 header,
 section {
@@ -41,18 +15,22 @@ section {
 }
 
 header {
-
-    background: #444;
-    -webkit-box-shadow: 0px 0px 4px 0px #333;
-    -moz-box-shadow: 0px 0px 4px 0px #333;
-    box-shadow: 0px 0px 4px 0px #333;
+    position: relative;
+    background-color: #ca321b;
+    border-bottom: solid 6px #f6e2db;
+    -webkit-box-shadow: 0 0 8px 0 #0d0200;
+    -moz-box-shadow: 0 0 8px 0 #0d0200;
+    box-shadow: 0 0 8px 0 #0d0200;
 }
 
 header h1 {
     float: left;
-    color: #fff;
+    color: #0d0200;
+    font-family: "Old Standard TT", serif; 
+    font-weight: 400; 
     font-size: 2rem;
-    text-shadow: 0 0 1px 0 rgba(100, 100, 100, 0.7);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
 header nav {
@@ -61,48 +39,95 @@ header nav {
 
 nav a {
     float: left;
-    padding: 0.5rem 0.5rem 0 0;
+    margin: 2rem 1rem 0 0;
+    padding: 0 0 0.4rem;
     list-style-type: none;
-    color: #fff;
     font-size: 1.2rem;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 }
+
+nav a { color: #0d0200; }
+nav a:visited { color: #0d0200; }
+nav a:hover { color: #380b03; border-bottom: dashed 1px #0d0200; }
 
 /* content */
 
 section {
-    padding: 20px 0 0;
+    padding: 20px 0;
+    background-color: #6797a3;
+    color: #00121b;
 }
 
-article {
-    float: left;
-    padding: 1rem;
-    margin: 0 1rem 1rem 0;
-    background: #efefef;
-    border: solid 1px #fff;
-
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-
-    -webkit-box-shadow: 0 0 4px 0 #333;
-    -moz-box-shadow: 0 0 4px 0 #333;
-    box-shadow: 0 0 4px 0 #333;    
+section p {
+    color: #0d0200;
+    font-weight: 400;
+    font-size: 0.85em;
+    font-family: "PT Sans", serif;
 }
 
-/* *** dumps *** */
+section a:hover {
+    background: #fe57a1;
+}
 
-/* bike font */
+/* bike in footer */
 
 @font-face {
     font-family: 'bikes';
     src: url('dump/bikes.eot?#') format('eot'),
-       url('dump/bikes.woff') format('woff'),
-       url('dump/bikes.ttf') format('truetype');
+         url('dump/bikes.woff') format('woff'),
+         url('dump/bikes.ttf') format('truetype');
 }
 
-b {
+footer {
+    width: 100%;
+    margin: 0.2rem 0 0;
+    padding: 2rem 0 0;
+    border-top: dashed 1px #0d0200;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 0 0 -2.5rem;
+    padding: 1rem 0 0 2.5rem;
     font-family: bikes, serif;
     font-size: 4rem;
-    color: #222;
+    color: #2d0000;
+}
+
+footer a:hover {
+    color: #2d0000;
+    border-bottom: solid 1px #0d0200;
+    -webkit-transform: rotate(-14deg); 
+    -moz-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+}
+
+/* responsive-ness */
+
+@media all and (max-width: 960px) {
+
+    div {
+        padding: 0 1rem;
+    }
+
+}
+
+@media all and (max-width: 580px) {
+
+    header nav {
+        clear: both;
+        float: left;
+        margin: 0 0 0 0.2rem;
+    }
+    nav a {
+        margin-top: 0rem;
+    }
+    nav a:hover {
+        border-bottom: 0; 
+    }
+    footer a {
+        font-size: 2rem;
+    }
+
 }
