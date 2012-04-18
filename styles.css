@@ -77,9 +77,9 @@ section p {
 
 @font-face {
     font-family: 'bikes';
-    src: url('dump/bikes.eot?#') format('eot'),
-         url('dump/bikes.woff') format('woff'),
-         url('dump/bikes.ttf') format('truetype');
+    src: url('fonts/bikes.eot?#') format('eot'),
+         url('fonts/bikes.woff') format('woff'),
+         url('fonts/bikes.ttf') format('truetype');
 }
 
 footer {
