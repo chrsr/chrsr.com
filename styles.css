@@ -17,10 +17,10 @@ section {
 header {
     position: relative;
     background-color: #ca321b;
-    border-bottom: solid 6px #f6e2db;
-    -webkit-box-shadow: 0 0 8px 0 #0d0200;
-    -moz-box-shadow: 0 0 8px 0 #0d0200;
-    box-shadow: 0 0 8px 0 #0d0200;
+    border-bottom: solid 4px #f6e2db;
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+    -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
 }
 
 header h1 {
@@ -28,7 +28,7 @@ header h1 {
     color: #0d0200;
     font-family: "Old Standard TT", serif; 
     font-weight: 400; 
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 }
@@ -39,7 +39,7 @@ header nav {
 
 nav a {
     float: left;
-    margin: 2rem 1rem 0 0;
+    margin: 3.2rem 1rem 0 0;
     padding: 0 0 0.4rem;
     list-style-type: none;
     font-size: 1.2rem;
@@ -50,61 +50,12 @@ nav a { color: #0d0200; }
 nav a:visited { color: #0d0200; }
 nav a:hover { color: #380b03; border-bottom: dashed 1px #0d0200; }
 
-/* content */
-
-section {
-    padding: 20px 0;
-    background-color: #6797a3;
-    color: #00121b;
-}
-
-section p {
-    color: #0d0200;
-    font-weight: 400;
-    font-size: 0.85em;
-    font-family: "PT Sans", serif;
-}
-
 /* 3d */
+
 .three-d {
-    font-size: 2em;
     color: #000;
     text-shadow: -0.06em 0 red, 0.06em 0 cyan;
-    font-size: 64px;
 }​
-
-/* bike in footer */
-
-@font-face {
-    font-family: 'bikes';
-    src: url('fonts/bikes.eot?#') format('eot'),
-         url('fonts/bikes.woff') format('woff'),
-         url('fonts/bikes.ttf') format('truetype');
-}
-
-footer {
-    width: 100%;
-    margin: 0.2rem 0 0;
-    padding: 2rem 0 0;
-    border-top: dashed 1px #0d0200;
-    text-align: center;
-}
-
-section a {
-    display: inline-block;
-    margin: 0 0 0 -2.5rem;
-    padding: 1rem 0 0 2.5rem;
-    font-family: bikes, serif;
-    font-size: 4rem;
-    color: #2d0000;
-}
-
-section a:hover {
-    color: #2d0000;
-    -webkit-transform: rotate(-14deg); 
-    -moz-transform: rotate(-14deg);
-    transform: rotate(-14deg);
-}
 
 /* responsive-ness */
 
