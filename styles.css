@@ -1,39 +1,41 @@
 
+/* helpers */
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
 /* structure */
 
-div {
+.wrapper {
     position: relative;
-    margin: 0 auto;
     max-width: 960px;
+    margin: 0 auto;
 }
 
 /* layout */
 
-header,
-section {
-    width: 100%;
-}
-
 header {
     position: relative;
-    background-color: #ca321b;
-    border-bottom: solid 4px #f6e2db;
-    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
-    -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+    width: 100%;
+    border-top: solid 4px rgba(0, 0, 0, 0.4);
+    color: #555;
 }
 
-header h1 {
+.title {
     float: left;
-    color: #0d0200;
     font-family: "Old Standard TT", serif; 
     font-weight: 400; 
     font-size: 3rem;
     text-transform: uppercase;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
-header nav {
+.title--threed {
+    color: #000;
+    text-shadow: -0.06em 0 red, 0.06em 0 #0ff;
+}​
+
+nav {
     float: right;
 }
 
@@ -44,18 +46,21 @@ nav a {
     list-style-type: none;
     font-size: 1.2rem;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
 }
 
-nav a { color: #0d0200; }
-nav a:visited { color: #0d0200; }
-nav a:hover { color: #380b03; border-bottom: dashed 1px #0d0200; }
+nav a {
+    color: #0d0200;
+}
 
-/* 3d */
+nav a:visited {
+    color: #0d0200;
+}
 
-.three-d {
-    color: #000;
-    text-shadow: -0.06em 0 red, 0.06em 0 cyan;
-}​
+nav a:hover {
+    color: #380b03;
+    border-bottom: solid 1px #0d0200;
+}
 
 /* responsive-ness */
 
@@ -69,17 +74,20 @@ nav a:hover { color: #380b03; border-bottom: dashed 1px #0d0200; }
 
 @media all and (max-width: 580px) {
 
-    header nav {
+    nav {
         clear: both;
         float: left;
         margin: 0 0 0 0.2rem;
     }
+
     nav a {
         margin-top: 0rem;
     }
+
     nav a:hover {
         border-bottom: 0; 
     }
+
     footer a {
         font-size: 2rem;
     }

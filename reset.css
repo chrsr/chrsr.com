@@ -24,10 +24,6 @@ td { vertical-align: top; }
 
 .ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; }
 
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
 /* legacy support */
 
 .lt-ie9 *{
