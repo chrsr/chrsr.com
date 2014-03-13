@@ -1,0 +1,102 @@
+
+* {
+    font-family: 'Droid Sans', Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: #4f4f4f;
+}
+
+/* helpers */
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+// Colours
+@pomegranate: #c0392b;
+@slate: #2c3e50;
+@aqua: #3498db;
+
+/* structure */
+
+body {
+    max-width: 720px;
+    margin: 0 auto;
+    background: @aqua;
+}
+
+/* layout */
+
+header {
+    border-left: solid 6px white;
+}
+
+.title {
+    margin: 20px 0;
+    padding: 0 0 0 10px;
+    border-left: solid 6px @aqua;
+    text-align: left;
+    font-family: "Open Sans", serif; 
+    font-weight: 800; 
+    font-size: 3rem;
+    text-transform: uppercase;
+    background: white;
+    color: @slate;
+}
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    float: left;
+    margin: 0 2em 1em 0;
+    padding: 0.8em 2em;
+    background-color: @slate;
+    color: white;
+    list-style-type: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: @slate
+}
+
+.hacks {
+
+    .hack {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        list-style: none;
+        background: #bbb;
+    }
+
+}
+
+/* responsive-ness */
+
+@media all and (max-width: 580px) {
+
+    nav {
+
+    }
+
+    nav a {
+        margin-top: 0rem;
+    }
+
+    nav a:hover {
+        border-bottom: 0; 
+    }
+
+    footer a {
+        font-size: 2rem;
+    }
+
+}
