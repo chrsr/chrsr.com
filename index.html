@@ -31,17 +31,17 @@
 
         <nav>
             <div class="navigation">
-                <a href="http://github.com/chrsr">github</a>
                 <a href="http://twitter.com/chrisrobots">twitter</a>
-                <a href="https://pinboard.in/u:chrsr">pinboard</a>
                 <a href="https://instagram.com/chrsr">instagram</a>
+                <a href="http://github.com/chrsr">github</a>
+                <a href="https://pinboard.in/u:chrsr">pinboard</a>
                 <a href="http://app.strava.com/athletes/160411">strava</a>
             </div>
         </nav>
 
         <div class="parallax">
 
-            <div class="background-image" style="background-image: url('http://distilleryimage4.ak.instagram.com/095254e2886411e380520e3a0c49f9b8_8.jpg')">
+            <div id="js-background" class="background-image" style="background-image: url('http://distilleryimage4.ak.instagram.com/095254e2886411e380520e3a0c49f9b8_8.jpg')">
                 <div class="quoted">
                     <h1 class="quoted__title">
                         Chris Roberts
@@ -52,8 +52,21 @@
                 </div>
             </div>
 
+            <script>
+                (function () {
+                    var bg = document.getElementById('js-background'),
+                        images = [
+                            'http://distilleryimage2.ak.instagram.com/0f4a5bea758311e3859712a851556c4a_8.jpg',
+                            'http://distilleryimage4.ak.instagram.com/095254e2886411e380520e3a0c49f9b8_8.jpg',
+                            'http://distilleryimage3.ak.instagram.com/81458d4471a211e3ac99128fcb024f53_8.jpg'
+                        ],
+                        random = (Math.floor(Math.random() * ((images.length - 1) - 0 + 1)) + 0);
+                    bg.setAttribute('style', 'background-image: url(' + images[random] + ')');
+                }());
+            </script>
+
             <div class="author">
-                <a href="http://twitter.com/chrsr" class="author__avatar" style="background-image: url(https://pbs.twimg.com/profile_images/1111530775/Chris_avatar_400x400.jpg)">@chrisrobots</a>
+                <a href="mailto:chris[at]chrsr.com" class="author__avatar" style="background-image: url(https://pbs.twimg.com/profile_images/1111530775/Chris_avatar_400x400.jpg)">chris at chrsr dot com</a>
             </div>
 
         </div>
