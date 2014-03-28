@@ -1,0 +1,17 @@
+{
+  "name": "chrsr.com",
+  "version": "0.0.0",
+  "homepage": "chrsr.com",
+  "authors": [
+    "Chris <chris@chrsr.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
