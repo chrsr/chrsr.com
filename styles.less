@@ -15,7 +15,6 @@
 @slate: #2c3e50;
 @aqua: #3498db;
 @maroon: #9b2335;
-
 @height: 1000px;
 
 .transition(@length: 0.3s) {
@@ -29,8 +28,8 @@
 
 html,
 body {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -41,7 +40,6 @@ body {
 
 a {
     color: white;
-
     &:hover {
         text-decoration: none;
     }
@@ -58,17 +56,6 @@ nav {
 .navigation {
     width: 700px;
     margin: 0 auto;
-}
-
-.navigation__burger {
-    display: none;
-    float: left;
-    margin: 0 1em 1em 0.3em;
-    background: none;
-    border: 0;
-    font-size: 2em;
-    color: @slate;
-    outline: 0;
 }
 
 nav a {
@@ -135,16 +122,12 @@ nav a:hover {
 
 .author {
     position: absolute;
-    width: 700px;
     min-height: 100px;
-    bottom: -18px;
-    left: 50%;
-    margin: 20px 0 0 -350px;
-    padding: 0 20px 10px 0;
+    top: 18px;
+    right: 0;
+    padding: 0 40px 10px 0;
     z-index: 1;
-
     &:hover {
-        bottom: 0;
         .transition();
     }
 }
@@ -164,28 +147,6 @@ nav a:hover {
     text-decoration: none;
     text-align: right;
     text-indent: 85px;
-
-    // 3d
-    // &:before,
-    // &:after {
-    //     content: '3d';
-    //     font-size: 0;
-    //     text-indent: -999;
-    //     z-index: -1;
-    //     display: block;
-    //     position: absolute;
-    //     float: left;
-    //     width: 75px;
-    //     height: 75px;
-    //     background: rgba(255, 0, 0, 0.1);
-    //     top: -2px;
-    //     left: -10px;
-    //     border-radius: 50%;
-    // }
-    // &:before {
-    //     left: 10px;
-    //     background: rgba(0, 0, 255, 0.1);
-    // }
 }
 
 .projects {
@@ -223,6 +184,7 @@ nav a:hover {
     width: 100%;
     max-width: 100%;
     height: auto;
+    border: solid 1px #555;
 }
 
 @media screen and (max-width: 700px) {
@@ -240,19 +202,13 @@ nav a:hover {
     }
 
     .introduction,
-    .projects,
-    .author {
+    .projects {
         width: 100%;
         padding-left: 1em;
     }
 
     .projects {
         padding: 0 1em;
-    }
-
-    .author {
-        left: 0;
-        margin-left: 0;
     }
 
 }
