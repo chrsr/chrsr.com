@@ -1,1 +1,15 @@
 Dumping ground of chris roberts.
+
+## Installation
+
+    npm install
+    bower install
+    grunt
+
+## Dev
+
+    grunt dev
+
+## Distribution
+
+    grunt build
