@@ -34,16 +34,6 @@ module.exports = function(grunt) {
             }
         },
 
-        jshint: {
-            options: {
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                'Gruntfile.js',
-                'src/**/*.js'
-            ]
-        },
-
         autoprefixer: {
             options: {
                 browsers: ['last 2 versions']
@@ -54,6 +44,16 @@ module.exports = function(grunt) {
                 src: 'src/css/*.css',
                 dest: 'dist/css/'
             }
+        },
+
+        jshint: {
+            options: {
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'Gruntfile.js',
+                'src/**/*.js'
+            ]
         },
 
         htmlmin: {
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
                 files: ['Gruntfile.js']
             },
             styles: {
-                files: ['styles/**/*.less'],
+                files: ['src/**/*.less'],
                 tasks: ['autoprefixer', 'less']
             },
             options: {
