@@ -83,6 +83,10 @@ module.exports = function(grunt) {
         },
 
         concat: {
+            src: {
+                src: 'src/js/**/*.js',
+                dest: 'src/js/scripts.js'
+            },
             dist: {
                 src: 'src/js/**/*.js',
                 dest: 'dist/js/scripts.js'
@@ -100,6 +104,18 @@ module.exports = function(grunt) {
             }
         },
 
+        connect: {
+            server: {
+                options: {
+                    host:'localhost',
+                    base: 'src/',
+                    port: 3000,
+                    open: true,
+                    livereload: true
+                }
+            }
+        },
+
         watch: {
             autoprefixer: {
                 files: ['src/***/**/*.css'],
@@ -107,10 +123,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['src/**/*.js'],
-                tasks: ['jshint'],
-                options: {
-                    livereload: true
-                }
+                tasks: ['jshint']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -121,16 +134,6 @@ module.exports = function(grunt) {
             },
             options: {
                 livereload: true
-            }
-        },
-
-        connect: {
-            server: {
-                options: {
-                    host:'localhost',
-                    port: 3000,
-                    keepalive: true
-                }
             }
         }
 
@@ -143,7 +146,8 @@ module.exports = function(grunt) {
         grunt.task.run([
             'less',
             'autoprefixer',
-            'connect',
+            'concat:src',
+            'connect:server',
             'watch'
         ]);
     });
@@ -151,7 +155,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', function () {
         grunt.task.run([
             'jshint',
-            'concat',
+            'concat:dist',
             'uglify',
             'less',
             'autoprefixer',
