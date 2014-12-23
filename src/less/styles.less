@@ -105,8 +105,12 @@ a {
     }
 
     .header {
-        margin-top: 51px;
-        padding: 3rem 1rem;
+        margin-top: 89px;
+        padding: 5rem 1rem;
+    }
+
+    .header__title {
+        .font-size(40);
     }
 
     .navigation {
@@ -117,6 +121,7 @@ a {
         a {
             float: left;
             width: 100% / 6;
+            padding: 2rem 1rem;
             .font-size(20);
 
             &:hover {
@@ -125,7 +130,6 @@ a {
             }
         }
     }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -142,20 +146,6 @@ a {
     height: 100%;
 }
 
-.background__credit {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1rem 1rem 0;
-    text-decoration: none;
-    color: white;
-
-    &:visited {
-        color: inherit;
-        text-decoration: underline;
-    }
-}
-
 .background__image {
     position: fixed;
     top: 0;
@@ -165,6 +155,76 @@ a {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.background__credit {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    padding: 1rem 1rem 3rem;
+    text-decoration: none;
+    color: white;
+
+    &:visited {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.credit__description {
+    display: block;
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+    line-height: 2.4rem;
+    .font-size(42);
+    border-bottom: solid 3px rgba(255, 255, 255, .6);
+}
+
+.credit__date {
+    display: block;
+    .font-size(16);
+    text-transform: uppercase;
+}
+
+.feeds {
+    width: 100%;
+    overflow: hidden;
+    margin: 2rem auto 0;
+    max-width: 1024px;
+    .on-top();
+}
+
+.feed {
+    padding: 0 0.5rem;
+    margin: 0 1rem;
+
+    h2 {
+        color: white;
+        font-weight: 300;
+    }
+
+    iframe {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .feed {
+        float: left;
+        width: (100% / 3) - 1;
+        margin: 0 1% 0 0;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    top: 100%;
+    .on-top();
 }
 
 .projects {
