@@ -84,11 +84,11 @@ module.exports = function(grunt) {
 
         concat: {
             src: {
-                src: 'src/js/**/*.js',
+                src: ['src/js/**/*.js', '!src/js/scripts.js'],
                 dest: 'src/js/scripts.js'
             },
             dist: {
-                src: 'src/js/**/*.js',
+                src: ['src/js/**/*.js', '!src/js/scripts.js'],
                 dest: 'dist/js/scripts.js'
             }
         },
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['src/**/*.js'],
-                tasks: ['jshint']
+                tasks: ['jshint', 'concat:src']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
