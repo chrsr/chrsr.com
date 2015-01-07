@@ -48,7 +48,11 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
-                reporter: require('jshint-stylish')
+                reporter: require('jshint-stylish'),
+                ignores: [
+                    "src/js/scripts.js",
+                    "src/js/vendor/**/*.js"
+                ]
             },
             all: [
                 'Gruntfile.js',
@@ -122,7 +126,7 @@ module.exports = function(grunt) {
                 tasks: ['autoprefixer']
             },
             js: {
-                files: ['src/**/*.js'],
+                files: ['src/**/*.js', '!src/js/scripts.js'],
                 tasks: ['jshint', 'concat:src']
             },
             gruntfile: {

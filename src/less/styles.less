@@ -3,11 +3,11 @@
 
 // less helpers
 
+@lightgrey: #ecf0f1;
 @grey: #313d41;
 @darkblue: #2588c9;
 @blue: #29acdc;
 @green: #aed144;
-
 
 .transition(@length: 0.3s) {
     transition: all @length ease-out;
@@ -33,10 +33,11 @@
 html,
 body {
     width: 100%;
-    height: 100%;
 }
 
 body {
+    background-color: @lightgrey;
+    transition: all 0.5s ease;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -52,7 +53,6 @@ a {
 .header {
     width: 100%;
     padding: 1rem;
-    background: url('../images/header-bg.png') 50% 50% repeat @darkblue;
     .on-top();
 }
 
@@ -67,6 +67,7 @@ a {
     .font-size(16);
     font-weight: 300;
     color: white;
+    padding-left: 2px;
 }
 
 .maxwidth {
@@ -97,6 +98,23 @@ a {
     }
 }
 
+.shapes {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top: -182px;
+    overflow-x: hidden;
+}
+
+.shape {
+    position: absolute;
+    height: 1000px;
+    width: 200px;
+    border-radius: 0 60px 0;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+}
+
 @media screen and (min-width: 740px) {
 
     .maxwidth {
@@ -105,8 +123,9 @@ a {
     }
 
     .header {
-        margin-top: 89px;
+        margin-top: 70px;
         padding: 5rem 1rem;
+        background: transparent;
     }
 
     .header__title {
@@ -130,6 +149,15 @@ a {
             }
         }
     }
+
+    .shapes {
+        position: relative;
+        top: -252px;
+    }
+
+    .shape {
+        height: 400px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -143,14 +171,13 @@ a {
 
 .background {
     width: 100%;
-    height: 100%;
 }
 
 .background__image {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 300px;
     z-index: -2;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -190,6 +217,7 @@ a {
 }
 
 .feeds {
+    display: none;
     width: 100%;
     overflow: hidden;
     margin: 2rem auto 0;
@@ -222,9 +250,10 @@ a {
 .content {
     position: relative;
     width: 100%;
-    min-height: 100px;
-    top: 100%;
+    padding: 0.5rem 1rem;
     .on-top();
+    background: @lightgrey;
+    .font-size(18);
 }
 
 .projects {
