@@ -20,7 +20,6 @@
     }
     interval = setInterval(function() {
         var els = document.querySelectorAll('.shape');
-        var index = Math.floor(Math.random() * max);
-        els[index].style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        els[Math.floor(Math.random() * max)].style.backgroundColor = 'rgba(255, 255, 255, 0)';
     }, time);
 }());

@@ -8,7 +8,7 @@
     var max = 50;
     var left = -200;
     var increment = 47;
-    var time = 20;
+    var time = 500;
     var interval;
     for( var i = 0; i < max; i++) {
         var el = document.createElement("div");
@@ -20,11 +20,6 @@
     }
     interval = setInterval(function() {
         var els = document.querySelectorAll('.shape');
-        var max = els.length;
-        els[Math.floor(Math.random() * (max - 0 + 1)) + 0].style.backgroundColor = 'rgba(255, 255, 255, 0)';
-        if (max === 0) {
-            document.querySelector('body').style.backgroundColor = 'white';
-            clearInterval(interval);
-        }
+        els[Math.floor(Math.random() * max)].style.backgroundColor = 'rgba(255, 255, 255, 0)';
     }, time);
 }());
