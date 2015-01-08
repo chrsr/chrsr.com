@@ -8,6 +8,8 @@
     var max = 50;
     var left = -200;
     var increment = 47;
+    var time = 20;
+    var interval;
     for( var i = 0; i < max; i++) {
         var el = document.createElement("div");
         el.setAttribute('class', 'shape');
@@ -16,12 +18,13 @@
         document.getElementById('shapes').appendChild(el);
         left += increment;
     }
-    setInterval(function() {
+    interval = setInterval(function() {
         var els = document.querySelectorAll('.shape');
         var max = els.length;
         els[Math.floor(Math.random() * (max - 0 + 1)) + 0].style.backgroundColor = 'rgba(255, 255, 255, 0)';
         if (max === 0) {
-            document.querySelector('body').style.backgroundColor = 'rgba(255, 255, 255, 0)';
+            document.querySelector('body').style.backgroundColor = 'white';
+            clearInterval(interval);
         }
-    }, 20);
+    }, time);
 }());
