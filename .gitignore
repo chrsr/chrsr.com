@@ -1,6 +1,6 @@
 node_modules
 src/bower_components
 src/css
-dist
+public
 .DS_Store
 mediatemple

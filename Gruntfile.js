@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         },
 
         dist: {
-            base: 'dist/',
+            base: 'public/',
             css: '<%= dist.base %>css/',
             js: '<%= dist.base %>js/'
         },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                 expand: true,
                 flatten: true,
                 src: 'src/css/*.css',
-                dest: 'dist/css/'
+                dest: 'public/css/'
             }
         },
 
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/',
                     src: '**/*.html',
-                    dest: 'dist/'
+                    dest: 'public/'
                 }]
             }
         },
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     expand: true,                  // Enable dynamic expansion
                     cwd: 'src/',                   // Src matches are relative to this path
                     src: '**/*.{png,jpg,gif}',   // Actual patterns to match
-                    dest: 'dist/'                  // Destination path prefix
+                    dest: 'public/'                  // Destination path prefix
                 }]
             }
         },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: ['src/js/**/*.js', '!src/js/scripts.js'],
-                dest: 'dist/js/scripts.js'
+                dest: 'public/js/scripts.js'
             }
         },
 
@@ -101,9 +101,9 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'dist/js',
+                    cwd: 'public/js',
                     src: '**/*.js',
-                    dest: 'dist/js'
+                    dest: 'public/js'
                 }]
             }
         },
