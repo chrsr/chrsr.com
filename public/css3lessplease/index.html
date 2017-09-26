@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CSS3 LESS Please!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet/less" href="css/css3.less">
+        <link rel="stylesheet/less" href="css/styles.less">
+
+        <script src="js/less-1.3.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-5479657-14', 'auto');
+        ga('send', 'pageview');
+        </script>
+
+        <a href="https://github.com/chrsr/css3lessplease"><img src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+        <header>
+            <h1>CSS3 LESS Please!</h1>
+        </header>
+
+        <section class="less">
+
+            <div class="box">
+                <h2>LESS, please!</h2>
+                <p>This element will receive instant changes as you run the CSS rules on the left. Enjoy!</p> 
+            </div>
+
+            <!-- begin rule -->
+            <div class="rule">
+
+                <div class="code less">
+                    <h2>Border radius <u class="compile">run</u></h2>
+                    
+<pre>
+.box-round (@radius: 12px) {
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.box {
+    .box-round(24px);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box shadow <u class="compile">run</u></h2>
+                    
+<pre>
+.box-shadow (@shadow: 1px 1px 2px rgba(0,0,0,0.25)) {
+    -webkit-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+
+.box {
+    .box-shadow(4px 4px 8px rgba(0,0,0,0.25));
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+
+                <div class="code less">
+                    <h2>Box gradient <u class="compile">run</u></h2>
+
+<pre>
+.box-gradient (@from: #444444, @to: #999999) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image:    -moz-linear-gradient(top, @from, @to);
+    background-image:      -o-linear-gradient(top, @from, @to);
+    background-image:         linear-gradient(top bottom, @from, @to);
+}
+
+.box {
+    .box-gradient(#ff0000, #0000ff);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box rgba <u class="compile">run</u></h2>
+                    
+<pre>
+.box-rgba (@r: 0, @g: 0, @b: 0, @opacity: 0.5) {
+    background-color: transparent;
+    background-color: rgba(@r, @g, @b, @opacity); 
+}
+
+.box {
+    .box-rgba(180, 180, 144, 0.6);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box rotate <u class="compile">run</u></h2>
+                    
+<pre>
+.box-rotate (@rotation: 90deg) {
+    -webkit-transform: rotate(@rotation);
+    -moz-transform: rotate(@rotation);
+    -ms-transform: rotate(@rotation);
+    -o-transform: rotate(@rotation);
+    transform: rotate(@rotation);
+}
+
+.box {
+    .box-rotate(7.5deg);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box scale <u class="compile">run</u></h2>
+                    
+<pre>
+.box-scale (@scale: 2) {
+    -webkit-transform: scale(@scale); 
+    -moz-transform: scale(@scale); 
+    -ms-transform: scale(@scale); 
+    -o-transform: scale(@scale); 
+    transform: scale(@scale);
+}
+
+.box {
+    .box-scale(0.8);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box 3d transforms <u class="compile">run</u></h2>
+
+<pre>
+.box-3dtransforms (@perspective: 300, @rotateY: 180deg) {
+    -webkit-perspective: @perspective; 
+    -moz-perspective: @perspective; 
+    -ms-perspective: @perspective; 
+    perspective: @perspective;
+    -webkit-transform: rotateY(@rotateY);  -webkit-transform-style: preserve-3d;
+    -moz-transform: rotateY(@rotateY);     -moz-transform-style: preserve-3d;
+    -ms-transform: rotateY(@rotateY);      -ms-transform-style: preserve-3d;
+    transform: rotateY(@rotateY);          transform-style: preserve-3d;
+}
+
+.box {
+    .box-3dtransforms(300, 180deg);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box transition <u class="compile">run</u></h2>
+
+<pre>
+.box-transition (@transition: all 0.3s ease-out) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.box {
+    .box-transition(all 0.5s ease-in);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box textshadow <u class="compile">run</u></h2>
+
+<pre>
+.box-textshadow (@shadow: 1px 1px 3px #fff) {
+    text-shadow: @shadow;
+}
+
+.box {
+    .box-textshadow(1px 1px 3px #fff);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box opacity <u class="compile">run</u></h2>
+
+<pre>
+.box-opacity (@opacity: 0.5) {
+    opacity: @opacity;
+}
+
+.box {
+    .box-opacity(0.9);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box sizing <u class="compile">run</u></h2>
+
+<pre>
+.box-sizing (@box-sizing: border-box) {
+    -webkit-box-sizing: @box-sizing;
+    -moz-box-sizing: @box-sizing;
+    box-sizing: @box-sizing;
+}
+
+.box {
+    .box-sizing(border-box);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Background size <u class="compile">run</u></h2>
+                    
+<pre>
+.box-bgsize (@size: 100% 100%) {
+    -webkit-background-size: @size;
+    background-size: @size;
+}
+
+.box {
+    .box-bgsize(50% 50%);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+            
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Box columns <u class="compile">run</u></h2>
+
+<pre>
+.box-columns (@count: 2, @gap: 15px) {
+    -webkit-column-count: @count;
+    -webkit-column-gap: @gap;
+    -moz-column-count: @count;
+    -moz-column-gap: @gap;
+    column-count: @count;
+    column-gap: @gap;
+}
+
+.box {
+    .box-columns(4, 30px);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+
+                <div class="code less">
+                    <h2>Animation <u class="compile">run</u></h2>
+                    
+<pre>
+.box-animation (@animation, @timer, @length) {
+    -webkit-animation: @animation @timer @length;
+    -moz-animation: @animation @timer @length;
+    -o-animation: @animation @timer @length;
+    animation: @animation @timer @length;
+}
+@-webkit-keyframes myanim {
+    0%   { opacity: 0.0; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+@-moz-keyframes myanim {
+    0%   { opacity: 0.0; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+@-o-keyframes myanim {
+    0%   { opacity: 0.0; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+@keyframes myanim {
+    0%   { opacity: 0.0; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+.box {
+    .box-animation(myanim, 5s, infinite);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Font face <u class="compile">run</u></h2>
+                    
+<pre>
+.WebFont () {
+    font-family: 'WebFont';
+    src: url('myfont.woff') format('woff'), url('myfont.ttf') format('truetype');
+}
+
+.box {
+    .WebFont();
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+            <!-- begin rule -->
+            <div class="rule">
+                
+                <div class="code less">
+                    <h2>Tab size <u class="compile">run</u></h2>
+                    
+<pre>
+.tab-size (@tab-size) {
+    -moz-tab-size: @tab-size;
+    -o-tab-size: @tab-size;
+    tab-size: @tab-size;
+}
+
+.box {
+    .tab-size(2);
+}</pre>
+                </div>
+
+                <div class="output">
+                    <pre></pre>
+                </div>
+            </div>
+            <!-- end rule -->
+
+        </section>
+
+        <style type="text/css" id="css">
+        </style>
+
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
