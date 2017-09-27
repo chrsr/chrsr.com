@@ -1,4 +1,6 @@
-Dumping ground of chris roberts.
+# chrsr.com
+
+Web dumping ground.
 
 ## Installation
 
@@ -10,13 +12,13 @@ Dumping ground of chris roberts.
 
     grunt dev
 
-## Run
-
-    node server.js
-
 ## Build
 
     grunt build
+
+## Run
+
+    node server.js
 
 ## Deploy
 
