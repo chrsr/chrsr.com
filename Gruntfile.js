@@ -158,6 +158,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', function () {
         grunt.task.run([
             'jshint',
+            'concat:src',
             'concat:dist',
             'uglify',
             'less',
