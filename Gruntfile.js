@@ -50,8 +50,7 @@ module.exports = function(grunt) {
             options: {
                 reporter: require('jshint-stylish'),
                 ignores: [
-                    "src/js/scripts.js",
-                    "src/js/vendor/**/*.js"
+                    "src/js/scripts.js"
                 ]
             },
             all: [
