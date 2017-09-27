@@ -10,8 +10,16 @@ Dumping ground of chris roberts.
 
     grunt dev
 
-## Distribution
+## Run
+
+    node server.js
+
+## Build
 
     grunt build
+
+## Deploy
+
+    git push heroku master
 
 :)
